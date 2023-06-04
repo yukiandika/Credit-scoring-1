@@ -1,0 +1,21 @@
+from django.db import models
+
+class Loan(models.Model):
+    home_ownership_cat = models.IntegerField(choices=[(1, 'Choice 1'), (2, 'Choice 2'), (3, 'Choice 3'), (4, 'Choice 4'), (5, 'Choice 5'), (6, 'Choice 6')])
+    income_cat = models.IntegerField(choices=[(1, 'Choice 1'), (2, 'Choice 2'), (3, 'Choice 3')])
+    term_cat = models.IntegerField(choices=[(1, 'Choice 1'), (2, 'Choice 2')])
+    application_type_cat = models.IntegerField(choices=[(1, 'Choice 1'), (2, 'Choice 2')])
+    purpose_cat = models.IntegerField(choices=[(1, 'Choice 1'), (2, 'Choice 2'), (3, 'Choice 3'), (4, 'Choice 4'), (5, 'Choice 5'), (6, 'Choice 6'), (7, 'Choice 7'), (8, 'Choice 8'), (9, 'Choice 9'), (10, 'Choice 10'), (11, 'Choice 11'), (12, 'Choice 12'), (13, 'Choice 13'), (14, 'Choice 14')])
+    interest_payment_cat = models.IntegerField(choices=[(1, 'Choice 1'), (2, 'Choice 2')])
+    loan_condition_cat = models.IntegerField(choices=[(0, 'Choice 0'), (1, 'Choice 1')])
+    grade_cat = models.IntegerField(choices=[(0, 'Choice 0'), (1, 'Choice 1')])
+    emp_length_int = models.FloatField()
+    annual_inc = models.FloatField()
+    loan_amount = models.FloatField()
+    interest_rate = models.FloatField()
+    dti = models.FloatField()
+    total_pymnt = models.FloatField()
+    total_rec_prncp = models.FloatField()
+    recoveries = models.FloatField()
+    installment = models.FloatField()
+    month_diff = models.FloatField()
